@@ -26,4 +26,13 @@ func Select(arr *[]int) {
 	}
 }
 
-//fmt.Println(arg)
+func Bubble2(arr *[]int) {
+	m := *arr
+	for i := 0; i < len(m); i++ {
+		for j := len(m) - 1; j > i; j-- {
+			if m[j-1] > m[j] {
+				m[j], m[j-1] = m[j-1], m[j]
+			}
+		}
+	}
+}
