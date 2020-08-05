@@ -1,7 +1,7 @@
 package sort
 
-func Bubble(arg *[]int) {
-	m := *arg
+func Bubble(arr *[]int) {
+	m := *arr
 	for i := 0; i < len(m); i++ {
 		for j := 0; j < len(m); j++ {
 			if m[i] < m[j] {
@@ -9,5 +9,21 @@ func Bubble(arg *[]int) {
 			}
 		}
 	}
-	//fmt.Println(arg)
 }
+
+func Select(arr *[]int) {
+	m := *arr
+	for i := 0; i < len(m)-1; i++ {
+		min := i
+		for j := i + 1; j < len(m); j++ {
+			if m[min] > m[j] {
+				min = j
+			}
+		}
+		if min != i {
+			m[i], m[min] = m[min], m[i]
+		}
+	}
+}
+
+//fmt.Println(arg)
