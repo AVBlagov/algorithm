@@ -1,6 +1,6 @@
 package sort
 
-func Bubble(arr *[]int) {
+func Sort(arr *[]int) {
 	m := *arr
 	for i := 0; i < len(m); i++ {
 		for j := 0; j < len(m); j++ {
@@ -26,7 +26,7 @@ func Select(arr *[]int) {
 	}
 }
 
-func Bubble2(arr *[]int) {
+func Bubble(arr *[]int) {
 	m := *arr
 	for i := 0; i < len(m); i++ {
 		for j := len(m) - 1; j > i; j-- {
